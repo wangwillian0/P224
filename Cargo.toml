@@ -1,0 +1,18 @@
+[package]
+name = "p224"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+uint = "0.9.5"
+wasm-bindgen = "0.2.83"
+
+[profile.release]
+opt-level = 3
+lto = true
+
+[package.metadata.wasm-pack.profile.dev]
+wasm-opt = ["-O4", "--enable-mutable-globals"]
