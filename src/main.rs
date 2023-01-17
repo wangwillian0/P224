@@ -1,4 +1,4 @@
-use p224::*;
+use p224_wasm::*;
 use std::env;
 
 fn main() {
